@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Ayham's Online Website</title><link>https://ayham.xyz/tags/linux/</link><description>Recent content in linux on Ayham's Online Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>me@ayham.xyz (ayham)</managingEditor><webMaster>me@ayham.xyz (ayham)</webMaster><copyright>2021 ayham All rights reserved</copyright><lastBuildDate>Tue, 28 Dec 2021 07:03:14 +0300</lastBuildDate><atom:link href="https://ayham.xyz/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>A Minimal Linux Display Manager</title><link>https://ayham.xyz/posts/a-minimal-linux-display-manager/</link><pubDate>Tue, 28 Dec 2021 07:03:14 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/a-minimal-linux-display-manager/</guid><description>&lt;p>There is this itch that tiling window manager users feel. Whether it is caused
+by surfing the world of r/unix or the want for change, it might be useful to
+have a way to easily switch between window managers. This article shows how to
+achieve this using already installed applications on your system.&lt;/p></description></item><item><title>True Full Disk Encryption On Linux</title><link>https://ayham.xyz/posts/true-full-disk-encryption/</link><pubDate>Fri, 10 Dec 2021 07:09:31 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/true-full-disk-encryption/</guid><description>&lt;p>My friends laugh at me when they are told that I have to put in 4 passwords
+with ~18 characters each to login into my computer. I laugh back at them,
+wishing them joy with Ads in the start-menu.&lt;/p>
+&lt;p>In this article, we will discuss &lt;em>true&lt;/em> full disk encryption. Everything,
+including having the kernel encrypted using LUKS. I personally found difficulty
+in finding good documentation detailing how to set-up disk encryption.
+Hopefully this guide would help someone out there.&lt;/p></description></item></channel></rss>

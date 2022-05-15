@@ -1,0 +1,21 @@
+aside {
+	max-width: 15%;
+	font-style: italic;
+	margin: 1.5em;
+}
+aside p {
+	margin: 0px;
+	text-align: center ;
+	color: var(--altfg);
+	background: var(--altbg);
+	border-radius: var(--border-radius);
+}
+
+@media (max-width: 55em) {
+	aside {
+		display: none;
+	}
+	aside img {
+		display: none;
+	}
+}

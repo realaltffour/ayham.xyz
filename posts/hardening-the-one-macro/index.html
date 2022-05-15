@@ -1,0 +1,114 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Ayham's online website"><meta name=keywords content="ayham,personal,blog,linux"><meta name=author content="ayham"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/x-icon href=https://ayham.xyz/pix/avatar/pfp_hu9bafeb3777c09ed162a23c625ac45bbd_416558_16x16_resize_box_3.1392a6ce53a82a2f035cc71a588b0822.png integrity="md5-E5KmzlOoKi8DXMcaWIsIIg=="><link rel=stylesheet type=text/css href=https://ayham.xyz/css/nav.1483a99f13c4b7e44ee3f3342a17260e.css integrity="md5-FIOpnxPEt+RO4/M0KhcmDg=="><link rel=stylesheet type=text/css href=https://ayham.xyz/css/common.7dc9ea16ff803d66f8cb0dadfe8da283.css integrity="md5-fcnqFv+APWb4yw2t/o2igw=="><title>Ayham's Online Website | Hardening The Moto One Macro</title></head><body><center><nav><ul><li><a href=/>Home</a></li><li><a href=/store/>Store</a></li><li><a href=/projects/>Projects</a></li><li><a href=/posts/>Posts</a></li><li><a href=/workflow/>Workflow</a></li><li><a href=/library/>Library</a></li><li><a href=/links/>Links</a></li><li><a href=/apps/>Apps</a></li></ul></nav></center><main><center><h1>Hardening The Moto One Macro</h1></center>Publish Date: <time datetime=2021-11-30>Nov 30, 2021</time>Tags:<a href=https://ayham.xyz/tags/guide>guide</a>
+<a href=https://ayham.xyz/tags/security>security</a>
+<a href=https://ayham.xyz/tags/android>android</a><br><br><article><p>The Motorola One Macro is a mid-range phone, with decent &ldquo;openness&rdquo; which allows
+basic hardening modification. The phone has the follow specifications:</p><ul><li>Mediatek MT6771 Helio P70 CPU</li><li>720 x 1520 px, 19:9 ratios (~270 ppi)</li><li>Comes with Anroid 9.0, officially upgradable to Android 10.0</li><li>Mali-G72 MP3 GPU</li><li>eMMC 5.1 storage with 64GB</li><li>microSDXC uses shared SIM slot, 32GB tested</li><li>Main camera 13 MP, depth camera 2MP, 2MP for macro camera</li><li>WIFI 802.11 b/g/n, with hotspot</li><li>No NFC support</li></ul><p>This guide goes over unlocking the bootloader, flashing a GSI, flashing
+LineageOS, reflashing stock ROM, fixing bootloop problems, and news
+on TWRP for the Moto One Macro.</p><h1 id=motos-naming-schemes>Moto&rsquo;s Naming Schemes</h1><p>Motorola has a weird naming scheme, but the following is a fair summary. XT2016
+is the model name. XT2016-1 and XT2016-2 are two different models. To check for
+your own variant, go to <em>Settings -> About phone -> Model & hardware</em>. PMD named
+ROMs are older than QMD named ROMs. QMD30, 30 is the release version. Lima is
+the nickname for Moto One Macro. Software channel, from my understanding, is
+related to the source of system updates. I had trouble updating after flashing
+Android 10 directly, but flashing stock Android 9.0 solved the issue. I haven&rsquo;t
+tested it thoroughly though. Updating from stock Android 9.0 to Android 10 is
+easily done from the settings.</p><h1 id=unlocking-the-bootloader>Unlocking the Bootloader</h1><p>Go to <a href=https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a/>Motorola&rsquo;s official website</a>,
+click next, create an account, plug your phone into your computer and run:</p><div class=highlight><div style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>fastboot oem get_unlock_data
+</span></span></code></pre></td></tr></table></div></div><p>This command will return five lines of data, concatenate the data returned
+after <code>(bootloader) </code>. Paste this string into the textbox on the site. You
+will be e-mailed with your unlocking code.</p><p>Finally, to unlock the phone:</p><div class=highlight><div style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>fastboot oem unlock [e-mailed code]
+</span></span><span style=display:flex><span><span style=color:#999;font-style:italic># run the previous command twice</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>Note: This formats ALL user-data and voids any warranty</em></p><h1 id=flashing-stock>Flashing Stock</h1><p>Stock ROMs can be useful to reset and try any new updates Motorola bestows upon
+its users, or to use Google-based Apps. Usually, these ROMs are infested with
+<em>Motorola & Metaverse</em> software.</p><p>To get the stock ROM, navigate to <a href=motostockrom.com>motostockrom.com</a>, search
+for XT2016, select the correct model varient and choose your stock ROM to
+download.</p><p>Unzip the file, <code>chmod</code> the <code>flashfile.bat</code>, after examining the file.
+Plug your phone, and run the following commands:</p><div class=highlight><div style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">4
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>unzip <span style=color:#6ab825;font-weight:700>$(</span>moto_stock_rom_file<span style=color:#6ab825;font-weight:700>)</span>.zip
+</span></span><span style=display:flex><span><span style=color:#24909d>cd</span> <span style=color:#6ab825;font-weight:700>$(</span>moto_stock_rom_file<span style=color:#6ab825;font-weight:700>)</span>/Firmware/
+</span></span><span style=display:flex><span>vi flashfile.bat <span style=color:#999;font-style:italic># examine the file, make sure it isn&#39;t doing something fishy</span>
+</span></span><span style=display:flex><span>chmod +x flashfile.bat
+</span></span><span style=display:flex><span>./flashfile.bat
+</span></span></code></pre></td></tr></table></div></div><p><em>Note: This formats ALL user-data and voids any warranty</em></p><h1 id=flashing-gsi>Flashing GSI</h1><p>GSIs are generic images, where the Android system is updated seperate from
+proprietary vendor drivers. GSI can be AOSP, Google plagued, or LineageOS. This
+section talks about the <a href=https://github.com/phhusson/treble_experimentations>treble
+GSIs</a>. The only treble GSI ROM
+I have tested is <a href=https://github.com/phhusson/treble_experimentations/releases/tag/v220>AOSP 10.0 v220</a>.
+Always choose arm64 A/B ROMs.</p><p>Download Google&rsquo;s <a href=https://dl.google.com/developers/android/qt/images/gsi/vbmeta.img>vbmeta</a>.
+After downloading the variant you want to flash, run the following commands:</p><div class=highlight><div style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">4
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">5
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">6
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>unxz <span style=color:#6ab825;font-weight:700>$(</span>system_iso<span style=color:#6ab825;font-weight:700>)</span>.xz
+</span></span><span style=display:flex><span>fastboot --disable-verity --disable-verification flash vbmeta_a vbmeta.img
+</span></span><span style=display:flex><span>fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
+</span></span><span style=display:flex><span>fastboot flash system_a <span style=color:#6ab825;font-weight:700>$(</span>system_iso<span style=color:#6ab825;font-weight:700>)</span>
+</span></span><span style=display:flex><span>fastboot flash system_b <span style=color:#6ab825;font-weight:700>$(</span>system_iso<span style=color:#6ab825;font-weight:700>)</span>
+</span></span><span style=display:flex><span>fastboot erase userdata
+</span></span></code></pre></td></tr></table></div></div><p><em>Note: This formats ALL user-data and voids any warranty</em></p><h1 id=flashing-lineageos>Flashing LineageOS</h1><p>LineageOS being a customizable custom android ROM, is wanted by many.
+Unfortunately, one can only support as many Android devices until it is no
+longer feasable. GSIs try to deliver a user experience that attempts to solve
+this. LineageOS GSI ROMs tend to be very buggy, mainly because of issues with
+vendor bootloaders. LineageOS GSI is flashable to the One Macro, and does indeed
+work. Wi-Fi, SMS and Calls do work. I have not tested Bluetooth. The image we
+are going to flash is not official nor affiliated with LineageOS developers
+themselves.</p><p>Download Google&rsquo;s <a href=https://dl.google.com/developers/android/qt/images/gsi/vbmeta.img>vbmeta</a>.
+Navigate to <a href=https://sourceforge.net/projects/andyyan-gsi/files/>Andy Yan&rsquo;s files</a>. I have tested
+LineageOS 17. Pick the image with arm64 <em>and</em> A/B systems. Then run the
+following commands:</p><div class=highlight><div style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">4
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">5
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">6
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>unxz <span style=color:#6ab825;font-weight:700>$(</span>system_iso<span style=color:#6ab825;font-weight:700>)</span>.xz
+</span></span><span style=display:flex><span>fastboot --disable-verity --disable-verification flash vbmeta_a vbmeta.img
+</span></span><span style=display:flex><span>fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
+</span></span><span style=display:flex><span>fastboot flash system_a <span style=color:#6ab825;font-weight:700>$(</span>system_iso<span style=color:#6ab825;font-weight:700>)</span>
+</span></span><span style=display:flex><span>fastboot flash system_b <span style=color:#6ab825;font-weight:700>$(</span>system_iso<span style=color:#6ab825;font-weight:700>)</span>
+</span></span><span style=display:flex><span>fastboot erase userdata
+</span></span></code></pre></td></tr></table></div></div><p><em>Note: This formats ALL user-data and voids any warranty</em></p><h1 id=magisk>Magisk</h1><p>Generally, following <a href=https://topjohnwu.github.io/Magisk/install.html>Magisk&rsquo;s official</a> installation
+guide works out of the box. Note however after flashing phh&rsquo;s treble
+GSIs, first Securize ROM by unrooting the device. <em>Settings -> Phh Settings -> Securize</em></p><h1 id=common-problems>Common Problems</h1><p>I have intentionally left out problems to this section due to its
+repetitiveness. This section includes solutions that are hacky but worked for
+me. Suprisingly, this phone <em>never</em> permanently soft-bricked.</p><h2 id=corrupted-dm-verity>Corrupted dm-verity</h2><p>After flashing multiple times with different ROMs, you might recieve a
+dm-verity & memory is corrupt error or something similar. You might have also
+tried formatting <code>user-data</code> and flashing <code>vbmeta</code> as done before. This issue
+happened to me after I tried to downgrade to Android 10 stock ROM. Resolving
+this issue is as easy as relocking and unlocking the bootloader.</p><div class=highlight><div style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>fastboot oem lock
+</span></span><span style=display:flex><span><span style=color:#999;font-style:italic># run the previous command twice</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>Note: This formats ALL user-data and voids any warranty</em></p><h2 id=motorola-updates-not-working>Motorola Updates not Working</h2><p>Contrary to what Motorola said, updates can <em>still</em> be delivered OTA even after
+unlocking the bootloader. I was able to upgrade from stock Android 9.0 to
+Android 10. Although I haven&rsquo;t tested twice, downloading stock PMD29.70-81
+should work with OTA updates.</p><h2 id=failed-to-flash-bootloader>Failed to Flash Bootloader</h2><p>This section is not completely fledged out, but there are multiple methods that
+could be tried when you occur an error when flashing stock bootloader. Firstly,
+try with verity off, download Google&rsquo;s
+<a href=https://dl.google.com/developers/android/qt/images/gsi/vbmeta.img>vbmeta</a>:</p><div class=highlight><div style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#686868">3
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>fastboot --disable-verity --disable-verification flash vbmeta_a vbmeta.img
+</span></span><span style=display:flex><span>fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
+</span></span><span style=display:flex><span>fastboot erase userdata
+</span></span></code></pre></td></tr></table></div></div><p><em>Note: This formats ALL user-data and voids any warranty</em></p><p>Secondly, you can try flashing Magisk&rsquo;s patched bootloader. If you would like
+an un-rooted system, do not install Magisk&rsquo;s Manager.</p><p>Thirdly, as a last resort, try relocking and unlocking the bootloader.
+Process mentioned in &ldquo;<a href=https://blog.ayham.xyz/hardening-the-one-macro.html#Corrupted%20dm-verity>Corrupted dm-verity</a>&rdquo; section.</p><h1 id=twrp>TWRP</h1><p><a href=https://twrp.me>TWRP</a> is an amazing bootloader. Control and customizability is
+a hallmark pillar of TWRP. I personally tried working on building a TWRP
+recovery for the One Macro. I got a basic working demo. Unfortunately, could
+not get any drivers to work properly. This issue could be blamed on Motorola.
+Their drivers aren&rsquo;t open-source. There might be a solution of getting blobs,
+although I found non.</p><p>The current Git repositories that are trying to develop a recovery:</p><ul><li><a href=https://github.com/realaltffour/android_device_motorola_lima_twrp>realaltffour/anroid_device_motorola_lima_twrp</a>
+(my build)</li><li><a href=https://github.com/mototek/recovery_motorola_lima>mototek/recovery_motorola_lima</a></li></ul><p>If you know any more, feel free to <a href=https://contact.ayham.xyz>send</a> me an email!</p><h1 id=conclusion>Conclusion</h1><p>This article was titled &ldquo;Hardening the One Macro&rdquo; for a reason. A first step
+towards hardening your mobile phone is unlocking the bootloader. And although
+this guide shows how to flash stock ROMs, these are only for pragmatic reasons.
+I encourage you to flash your Moto One Macro with a treble FOSS build.</p></article></main><footer><center><p>Unique Visitors:
+<a href=https://www.digits.net target=_blank rel=noopener><img src="https://counter.digits.net/?counter={f115c91c-b3dd-7584-456b-e7a9e52faa74}&template=simple" alt="Hit Counter by Digits" border=0></a></p><p><a href=https://ayham.xyz><img width=88 height=31 src=https://ayham.xyz/pix/webpins/ayhamxyz.gif alt="ayham.xyz webpin"></a></p><p>Last Edited On:2021-11-30</p></center></footer><center><small>Copyright (c) 2022 ayham</small></center></body></html>
