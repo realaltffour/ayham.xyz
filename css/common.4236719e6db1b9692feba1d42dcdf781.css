@@ -110,6 +110,9 @@ a:hover {
 center > small {
 	color: var(--altfg);
 }
+small > a {
+	text-decoration-style: dashed;
+}
 
 .highlight div,
 .highlight pre {
