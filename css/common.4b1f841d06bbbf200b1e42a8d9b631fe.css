@@ -122,3 +122,10 @@ small > a {
 img {
 	max-width: 100%;
 }
+
+#externalLink {
+	white-space:nowrap;
+	vertical-align:super;
+	text-decoration:none;
+	font-size:8px
+}
