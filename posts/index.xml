@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Ayham's Online Website</title><link>https://ayham.xyz/posts/</link><description>Recent content in Posts on Ayham's Online Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>me@ayham.xyz (ayham)</managingEditor><webMaster>me@ayham.xyz (ayham)</webMaster><copyright>2021 ayham All rights reserved</copyright><lastBuildDate>Thu, 31 Mar 2022 04:51:03 +0300</lastBuildDate><atom:link href="https://ayham.xyz/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Morality Of Pursuing Money: An Essay</title><link>https://ayham.xyz/posts/morality-of-pursuing-money-an-essay/</link><pubDate>Thu, 31 Mar 2022 04:51:03 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/morality-of-pursuing-money-an-essay/</guid><description>&lt;p>&lt;em>The following is an essay from an assignment task in school that I took too
-seriously. After contemplation, I realize that the essay itself is not complete
-and probably contains linguistic mistakes. However, this is AN attempt at
-rationalizing money pursuit. While developing the argument presented here, I had
-a debate with a classmate which helped write the intent section. All ideas
-presented here are just ideas and nothing serious.&lt;/em>&lt;/p></description></item><item><title>A Minimal Linux Display Manager</title><link>https://ayham.xyz/posts/a-minimal-linux-display-manager/</link><pubDate>Tue, 28 Dec 2021 07:03:14 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/a-minimal-linux-display-manager/</guid><description>&lt;p>There is this itch that tiling window manager users feel. Whether it is caused
-by surfing the world of r/unix or the want for change, it might be useful to
-have a way to easily switch between window managers. This article shows how to
-achieve this using already installed applications on your system.&lt;/p></description></item><item><title>True Full Disk Encryption On Linux</title><link>https://ayham.xyz/posts/true-full-disk-encryption/</link><pubDate>Fri, 10 Dec 2021 07:09:31 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/true-full-disk-encryption/</guid><description>&lt;p>My friends laugh at me when they are told that I have to put in 4 passwords
-with ~18 characters each to login into my computer. I laugh back at them,
-wishing them joy with Ads in the start-menu.&lt;/p>
-&lt;p>In this article, we will discuss &lt;em>true&lt;/em> full disk encryption. Everything,
-including having the kernel encrypted using LUKS. I personally found difficulty
-in finding good documentation detailing how to set-up disk encryption.
-Hopefully this guide would help someone out there.&lt;/p></description></item><item><title>Hardening The Moto One Macro</title><link>https://ayham.xyz/posts/hardening-the-one-macro/</link><pubDate>Tue, 30 Nov 2021 06:56:35 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/hardening-the-one-macro/</guid><description>&lt;p>The Motorola One Macro is a mid-range phone, with decent &amp;ldquo;openness&amp;rdquo; which allows
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Ayham's Online Website</title><link>https://ayham.xyz/posts/</link><description>Recent content in Posts on Ayham's Online Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>me@ayham.xyz (ayham)</managingEditor><webMaster>me@ayham.xyz (ayham)</webMaster><lastBuildDate>Sun, 15 May 2022 18:51:53 +0300</lastBuildDate><atom:link href="https://ayham.xyz/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hardening The Moto One Macro</title><link>https://ayham.xyz/posts/hardening-the-one-macro/</link><pubDate>Sun, 15 May 2022 18:51:53 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/hardening-the-one-macro/</guid><description>&lt;p>The Motorola One Macro is a mid-range phone, with decent &amp;ldquo;openness&amp;rdquo; which allows
 basic hardening modification. The phone has the follow specifications:&lt;/p>
 &lt;ul>
 &lt;li>Mediatek MT6771 Helio P70 CPU&lt;/li>
@@ -27,10 +13,24 @@ basic hardening modification. The phone has the follow specifications:&lt;/p>
 &lt;/ul>
 &lt;p>This guide goes over unlocking the bootloader, flashing a GSI, flashing
 LineageOS, reflashing stock ROM, fixing bootloop problems, and news
-on TWRP for the Moto One Macro.&lt;/p></description></item><item><title>blogit: A Complete Guide</title><link>https://ayham.xyz/posts/blogit-to-blog-it/</link><pubDate>Fri, 26 Nov 2021 19:18:52 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/blogit-to-blog-it/</guid><description>&lt;p>Running a personal website should be an easy task. Unfortunately, a big
+on TWRP for the Moto One Macro.&lt;/p></description></item><item><title>A Minimal Linux Display Manager</title><link>https://ayham.xyz/posts/a-minimal-linux-display-manager/</link><pubDate>Sat, 14 May 2022 06:05:27 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/a-minimal-linux-display-manager/</guid><description>&lt;p>There is this itch that tiling window manager users feel. Whether it is caused
+by surfing the world of r/unix or the want for change, it might be useful to
+have a way to easily switch between window managers. This article shows how to
+achieve this using already installed applications on your system.&lt;/p></description></item><item><title>blogit: A Complete Guide</title><link>https://ayham.xyz/posts/blogit-to-blog-it/</link><pubDate>Sat, 14 May 2022 06:05:27 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/blogit-to-blog-it/</guid><description>&lt;p>Running a personal website should be an easy task. Unfortunately, a big
 hindrance is that there aren&amp;rsquo;t many &amp;ldquo;suckless&amp;rdquo; blogging system.
-&lt;a href="https://pedantic.software/git/blogit"target="_blank">blogit&lt;/a>&lt;span class="#externalLink">🔗&lt;/span> is the closest in terms of
+&lt;a href="https://pedantic.software/git/blogit"target="_blank">blogit&lt;/a>&lt;span class="externalLink">🔗&lt;/span> is the closest in terms of
 simplicity and minimalism to perfection. This article would be an end-all be-all
-guide to effectively install blogit onto your own website.&lt;/p></description></item><item><title>The Beginning of a series!</title><link>https://ayham.xyz/posts/firstpost/</link><pubDate>Fri, 01 Oct 2021 16:05:06 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/firstpost/</guid><description>The Beginning of a series!
+guide to effectively install blogit onto your own website.&lt;/p></description></item><item><title>Morality Of Pursuing Money: An Essay</title><link>https://ayham.xyz/posts/morality-of-pursuing-money-an-essay/</link><pubDate>Sat, 14 May 2022 06:05:27 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/morality-of-pursuing-money-an-essay/</guid><description>&lt;p>&lt;em>The following is an essay from an assignment task in school that I took too
+seriously. After contemplation, I realize that the essay itself is not complete
+and probably contains linguistic mistakes. However, this is AN attempt at
+rationalizing money pursuit. While developing the argument presented here, I had
+a debate with a classmate which helped write the intent section. All ideas
+presented here are just ideas and nothing serious.&lt;/em>&lt;/p></description></item><item><title>True Full Disk Encryption On Linux</title><link>https://ayham.xyz/posts/true-full-disk-encryption/</link><pubDate>Sat, 14 May 2022 06:05:27 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/true-full-disk-encryption/</guid><description>&lt;p>My friends laugh at me when they are told that I have to put in 4 passwords
+with ~18 characters each to login into my computer. I laugh back at them,
+wishing them joy with Ads in the start-menu.&lt;/p>
+&lt;p>In this article, we will discuss &lt;em>true&lt;/em> full disk encryption. Everything,
+including having the kernel encrypted using LUKS. I personally found difficulty
+in finding good documentation detailing how to set-up disk encryption.
+Hopefully this guide would help someone out there.&lt;/p></description></item><item><title>The Beginning of a series!</title><link>https://ayham.xyz/posts/firstpost/</link><pubDate>Thu, 12 May 2022 05:46:18 +0300</pubDate><author>me@ayham.xyz (ayham)</author><guid>https://ayham.xyz/posts/firstpost/</guid><description>The Beginning of a series!
 This would be the beginning of my all-new article series. I would be writing about software I make and use, with the occasional school essay turned article.
 The story shall begin!</description></item></channel></rss>
