@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c64db4e3d9154ffefe630809a6d356071d6ce233692a77b03e7d59f109ac6639
-size 291
+aside {
+	max-width: 15%;
+	font-style: italic;
+	margin: 1.5em;
+}
+aside p {
+	margin: 0px;
+	text-align: center ;
+	color: var(--altfg);
+	background: var(--altbg);
+	border-radius: var(--border-radius);
+}
+
+@media (max-width: 55em) {
+	aside {
+		display: none;
+	}
+	aside img {
+		display: none;
+	}
+}

@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a8162f2b293e04fa19b17972cfdbe153ad5bf2c41fa574b673422a45e545061c
-size 709
+<!-- ENTERING PARTIAL: METADATA -->
+{{- $dateTime := .PublishDate.Format "2006-01-02" -}}
+
+{{- $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" -}}
+Publish Date: <time dateTime="{{ $dateTime }}">{{- .PublishDate.Format $dateFormat -}}</time>
+
+{{- $lastTime := .Lastmod.Format "2006-01-02" -}}
+{{- if ne $lastTime $dateTime -}}
+&nbspLast Update: <time dateTime="{{ $lastTime }}">{{- .Lastmod.Format $dateFormat -}}</time>
+{{- end -}}
+<br/>
+{{- with .Params.tags -}}
+Tags:
+{{- range . -}}
+{{- $href := print (absURL "tags/") (urlize .) -}}
+<a href="{{ $href }}">{{ . }}</a>
+{{ end }}
+{{ end }}
+<br/>
+{{ .WordCount }} words, {{ .ReadingTime }} minute(s) to read.
+<!-- EXITING PARTIAL: METADATA -->

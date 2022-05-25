@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:daf36f1159c23c11ca0319714426a6d9ec29d0a904fe0fe59393687d76e0c012
-size 1335
+<!-- ENTERING PARTIAL: HEAD -->
+{{- $commonCSS := resources.Get "css/common.css" | resources.Fingerprint "md5" -}}
+{{- $navCSS := resources.Get "css/nav.css" | resources.Fingerprint "md5" -}}
+
+{{- $favicon := resources.Get "pix/avatar/pfp.png" -}}
+{{- $favicon := $favicon.Resize (printf "%dx%d ico" 16 16) | resources.Fingerprint "md5" -}}
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Ayham's online website">
+	<meta name="keywords" content="ayham, personal, blog, linux">
+	<meta name="author" content="ayham">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
+	<link rel="icon" type="image/x-icon" href="{{ $favicon.Permalink }}"
+										 integrity="{{ $favicon.Data.Integrity }}">
+
+	<link rel="stylesheet" type="text/css" href="{{ $navCSS.Permalink }}"
+										   integrity="{{ $navCSS.Data.Integrity }}">
+	<link rel="stylesheet" type="text/css" href="{{ $commonCSS.Permalink }}"
+										   integrity="{{ $commonCSS.Data.Integrity }}">
+
+	{{- $title := print .Site.Title " | " .Title -}}
+	{{- if .IsHome }}{{ $title = .Site.Title }}{{ end -}}
+	<title>{{ $title }}</title>
+</head>
+<!-- EXITING PARTIAL: HEAD -->

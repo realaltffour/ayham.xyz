@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:858069552e45fc7585072a81ac2b91cb639ab27cc55a77fba1a0a0094aeb59e7
-size 276
+<!-- ENTERING PARTIAL: HEADER -->
+<center>
+	<nav>
+		<ul>
+			{{- range .Site.Menus.main -}}
+			<li><a href="{{ .URL }}">
+					{{- $text := print .Name | safeHTML -}}
+					{{- $text -}}
+				</a>
+			</li>
+			{{- end -}}
+		</ul>
+	</nav>
+</center>
+<!-- EXITING PARTIAL: HEADER -->

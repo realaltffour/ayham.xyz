@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5aaf5aa78106684eca1fa822e24be4fa268cd4816a7d371f8ae6cabddb50ef8d
-size 388
+{{ $image := resources.Get (printf "%s" (.Destination | safeURL)) |
+resources.Fingerprint "md5" -}}
+{{ $image := $image.Resize (printf "%dx%d webp" $image.Width $image.Height) }}
+<aside style="float: {{- .Title }}">
+	<img alt="{{- .PlainText | htmlUnescape -}}"src="{{ $image.RelPermalink }}"
+		 integrity="{{ $image.Data.Integrity }}">
+	<p>{{- .PlainText | htmlUnescape -}}</p>
+</aside>

@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a6f2b5009ad82c1c8efbaeb9b276b5e37206bbac8aaac4d61018d1f0b254ecfd
-size 137
+.pfp {
+	margin: auto;
+
+	border-style: solid;
+	border-width: 0.5px;
+	border-radius: 14px;
+	border-color: rgba(var(--bordercolor), 0.1);
+}

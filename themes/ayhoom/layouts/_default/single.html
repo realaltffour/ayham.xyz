@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9d405f54e7ecf85b82e277c15f915b954f6b79b856fe29165b0243f3d8ef5568
-size 205
+{{ define "main" }}
+{{- partial "header.html" . -}}
+<main>
+	<center>
+		<h1>{{ .Title }}</h1>
+	</center>
+	{{ partial "metadata.html" . }}
+	<br><br>
+	<article>
+		{{ .Content }}
+	</article>
+</main>
+{{ end }}

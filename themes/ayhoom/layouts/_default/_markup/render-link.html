@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:48dc36c7c7ba380bc4a6b44fe073a65bebf151fd9c797d81b1a1545af8fbe574
-size 502
+{{- if strings.HasPrefix .Destination "http" -}}
+<a href="{{ .Destination | safeURL }}"{{- with .Title -}} title="{{ . }}"{{- end -}} target="_blank">
+	{{- else -}}
+<a href="{{ .Destination | safeURL }}"{{- with .Title -}} title="{{ . }}"{{- end -}}>
+	{{- end -}}
+	{{- .Text | safeHTML -}}</a>
+{{- /* This comment removes trailing newlines. */ -}}
+{{- if strings.HasPrefix .Destination "http" -}}
+<span class="externalLink">🔗</span>
+{{- end -}}
+{{- /* This comment removes trailing newlines. */ -}}

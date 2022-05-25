@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0aa40d3a0890051b2bb80d81a1a502b6285263ee2b128001ad2f8a4793636d07
-size 242
+{{ $image := resources.Get (printf "%s" (.Destination | safeURL)) |
+resources.Fingerprint "md5" -}}
+<center>
+	<img alt="{{- .PlainText | htmlUnescape -}}" src="{{- $image.Permalink
+			  -}}" integrity="{{ $image.Data.Integrity }}">
+</center>

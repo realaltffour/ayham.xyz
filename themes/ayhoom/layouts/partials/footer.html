@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:002eee049bab4f2f78cf8e1e2e701c7aeffafdc348e052d1e1b2b80aa956d968
-size 911
+<!-- ENTERING PARTIAL: FOOTER -->
+{{- $image := resources.Get "pix/webpins/ayhamxyz.gif" | resources.Fingerprint "md5" -}}
+<footer>
+	<center>
+		<p>Unique Visitors:
+		<a href="https://www.digits.net" target="_blank" rel=noopener>
+			<img src="https://counter.digits.net/?counter={f115c91c-b3dd-7584-456b-e7a9e52faa74}&template=simple" alt="Hit Counter by Digits" border=0  />
+		</a>
+		</p>
+		<p>
+		<a href="https://ayham.xyz">
+			<img width=88 height=31 src="{{- $image.Permalink -}}"
+									integrity="{{- $image.Data.Integrity -}}" alt="ayham.xyz webpin">
+		</a>
+		</p>
+		<p>Last Edited On: {{ .Lastmod.Format "2006-01-02" -}}
+		</p>
+	</center>
+</footer>
+<center>
+	<small>Copyright (c) {{ now.Format "2006"}} ayham</small><br/>
+	<small><a href="/index.xml">Subscribe via RSS.</a></small><br/>
+	<small><a href="{{ ref . "details.md" }}">Website Details.</a></small>
+</center>
+<!-- EXITING PARTIAL: FOOTER -->

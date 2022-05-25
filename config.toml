@@ -1,3 +1,101 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10c32b5b3448af7c1d6fcb45d635f8544184886947a9c88dcbcdd4e3daf26b1e
-size 1791
+baseURL = 'https://ayham.xyz/'
+languageCode = 'en-us'
+title = "Ayham's Online Website"
+theme = "ayhoom"
+enableGitInfo = true
+
+[frontmatter]
+date = [":git","date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
+
+rssLimit = 20
+copyright = "(c) 2021 ayham"
+
+[author]
+	name = "ayham"
+	email = "me@ayham.xyz"
+
+[menu]
+	[[menu.main]]
+		name = "Home"
+		pre = "home"
+		url = "/"
+		weight = 1
+	[[menu.main]]
+		name = "Store"
+		pre = "store"
+		url = "/store/"
+		weight = 2
+	[[menu.main]]
+		name = "Projects"
+		pre = "projects"
+		url = "/projects/"
+		weight = 3
+	[[menu.main]]
+		name = "Posts"
+		pre = "posts"
+		url = "/posts/"
+		weight = 4
+	[[menu.main]]
+		name = "Workflow"
+		pre = "workflow"
+		url = "/workflow/"
+		weight = 5
+	[[menu.main]]
+		name = "Library"
+		pre = "library"
+		url = "/library/"
+		weight = 6
+	[[menu.main]]
+		name = "Links"
+		pre = "links"
+		url = "/links/"
+		weight = 7
+	[[menu.main]]
+		name = "Apps"
+		pre = "apps"
+		url = "/apps/"
+		weight = 8
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'native'
+    tabWidth = 4
+
+[imaging]
+    anchor = 'Smart'
+    bgColor = '#ffffff'
+    hint = 'photo'
+    quality = 75
+    resampleFilter = 'Box'
+    [imaging.exif]
+    	disableDate = false
+    	disableLatLong = false
+    	excludeFields = ''
+    	includeFields = ''
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+
+enableRobotsTXT = true

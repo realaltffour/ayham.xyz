@@ -1,3 +1,133 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8bfc3324341220f02242772c183297209f637b49d220326c9abdefa2488767d6
-size 2468
+:root {
+	--genwidth: 75%;
+	--navwidth: 85% ;
+
+	--border-color: 249, 139, 96;
+	--border-radius: 3px;
+
+	--border-color-navbar: 234, 89, 89;
+	--border-color-navbar-list: 255, 192, 87;
+}
+@media (prefers-color-scheme: light) {
+	:root{
+		--bg: #e6e6e6;
+		--altbg: rgba(204, 204, 204, 0.4);
+		--fg: #1a1a1a ;
+		--altfg: #333333;
+
+		--links-color: #9a001f;
+		--links-highlight: #872a05;
+		--links-underline: #872a05;
+		--links-underline-highlight: #6a4100;
+
+		--headings-color: #aa4722;
+		--headings-underline: #796505;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #1A1A1D;
+		--altbg: rgba(78, 78, 80, 0.4);
+		--fg: #F1FBF7;
+		--altfg: #ccc;
+
+		--links-color: #EA5959;
+		--links-highlight: #F98B60;
+		--links-underline: #F98B60;
+		--links-underline-highlight: #FFC057;
+
+		--headings-color: #F98B60;
+		--headings-underline: #FFE084;
+	}
+}
+
+body {
+	background: var(--bg);
+	color: var(--fg);
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 50px;
+	vertical-align: middle;
+
+	font-family: Verdana, sans-serif;
+}
+@media (min-width: 45em) {
+	body {
+		max-width: var(--genwidth);
+	}
+}
+main {
+	margin: 1em;
+	padding: 0.5em;
+	border-style: solid;
+	border-color: rgba(var(--border-color), 1.8);
+	border-radius: var(--border-radius);
+}
+
+footer {
+	text-align: center ;
+	font-variant: small-caps ;
+	clear: both ;
+	color: var(--altfg);
+	background: var(--altbg);
+	border-radius: var(--border-radius);
+	max-width: var(--genwidth);
+	display: block;
+	margin: auto;
+	padding: 0.5em;
+
+	border-style: solid;
+	border-color: rgba(var(--border-color), 0.5);
+
+	max-width: 15em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--headings-color);
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-color: var(--headings-underline);
+}
+
+ul h3 { 
+	text-decoration: none;
+}
+
+a {
+	color: var(--links-color);
+	text-decoration: underline;
+	text-decoration-color: var(--links-underline);
+	-webkit-text-decoration-color: var(--links-underline);
+	text-decoration-thickness: auto;
+}
+
+/* show underline on hover */
+a:hover {
+	color: var(--links-highlight);
+	text-decoration: underline;
+	text-decoration-color: var(--links-underline-highlight);
+	-webkit-text-decoration-color: var(--links-underline-highlight);
+}
+
+center > small {
+	color: var(--altfg);
+}
+small > a {
+	text-decoration-style: dashed;
+}
+
+.highlight div,
+.highlight pre {
+	overflow-x: auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+.externalLink {
+	white-space:nowrap;
+	vertical-align:super;
+	text-decoration:none;
+	font-size:8px
+}

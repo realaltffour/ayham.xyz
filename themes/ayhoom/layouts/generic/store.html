@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cf98858b201631e176bfe54dfcf1b993a06b00dcfe84a6546b0de6630c539a03
-size 400
+{{ define "main" }}
+{{- partial "header.html" . -}}
+{{- $imageCSS := resources.Get "css/image.showcase.css" | resources.Fingerprint "md5" -}}
+
+<main>
+	<link rel="stylesheet" type="text/css" href="{{ $imageCSS.Permalink }}"
+										   integrity="{{ $imageCSS.Data.Integrity }}">
+	<center>
+		<h1>{{ .Params.title }}</h4>
+		<h3>{{ .Params.subtitle }}</h3>
+	</center>
+	{{ .Content }}
+</main>
+{{ end }}

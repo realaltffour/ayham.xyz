@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a79193b7bc0e26a134f8539d68b542b354aa8c56c28e1c51120576ed4f83e7ce
-size 404
+{{- define "main" -}}
+{{- partial "header.html" . -}}
+{{- $libraryCSS := resources.Get "css/library.css" | resources.Fingerprint "md5" -}}
+<main>
+	<link rel="stylesheet" type="text/css" href="{{ $libraryCSS.Permalink }}"
+										   integrity="{{ $libraryCSS.Data.Integrity }}">
+	<center>
+		<h1>{{- .Params.title -}}</h4>
+		<h3>{{- .Params.subtitle -}}</h3>
+	</center>
+	{{ .Content }}
+</main>
+{{ end }}

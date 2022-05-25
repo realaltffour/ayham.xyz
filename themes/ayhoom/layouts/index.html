@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d6a946c5a505796fe423930136eb9d4236c5d0bfcf1bb52634d393c9ff896c7
-size 682
+{{- define "main" -}}
+{{- $image := resources.Get "pix/avatar/pfp.png" -}}
+{{- $image := $image.Resize (printf "%dx%d webp" $image.Width $image.Height) -}}
+
+{{- $pfpCSS := resources.Get "css/image.pfp.css" | resources.Fingerprint "md5" -}}
+
+<main>
+	<link rel="stylesheet" type="text/css" href="{{ $pfpCSS.Permalink }}"
+										   integrity="{{ $pfpCSS.Data.Integrity }}">
+	<center>
+		<h4>{{ .Site.Title }}</h4>
+		<img class=pfp src="{{ $image.Permalink }}" width=35% height=auto
+		alt="ayham">
+		<h3>{{ .Params.subtitle }}</h3>
+		{{- partial "header.html" . -}}
+		<p>Navigate this website by clicking on the above navigation bar.</p>
+		{{ .Content }}
+	</center>
+</main>
+{{ end }}

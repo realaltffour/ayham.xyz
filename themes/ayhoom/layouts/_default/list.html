@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ba90a6b1579323b83a36facee5f61d7019909b4494db15a970d75361f81a86b5
-size 309
+{{- define "main" -}}
+{{- partial "header.html" . -}}
+<main>
+	<center>
+		<h1>{{ .Title }}</h1>
+	</center>
+	<ul>
+		{{- range .Pages.ByPublishDate.Reverse -}}
+		<li>
+			<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+			{{- partial "metadata.html" . -}}
+		</li>
+		{{- end -}}
+	</ul>
+</main>
+{{- end -}}

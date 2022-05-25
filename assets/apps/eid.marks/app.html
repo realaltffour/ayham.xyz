@@ -1,3 +1,70 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a343702869b171f538a836003eb2ffc05b47a33dafdd56c94cb11c21def02994
-size 2004
+<center>
+	<table id="subjectsTable" style="visibility: collapse">
+		<style>
+#subjectsTable > tbody > tr > td, #subjectsTable > tr > td {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+	 #subjectsTable > tbody > tr, #subjectsTable > tr {
+		 text-align: center;
+	 }
+		</style>
+		<tr>
+			<td>Name</td>
+			<td>Marks</td>
+			<td>Max</td>
+			<td>Weight</td>
+			<td>Del</td>
+		</tr>
+	</table><br/>
+	<form id="js-form" onsubmit="return validForm(this)">
+		<style>
+#js-form > table > tbody > tr > td {
+	text-align: right;
+}
+		</style>
+		<table>
+			<tr>
+				<td><label for="sname">Subject Name:</label></td>
+				<td><input type="text" list="commonSubjectNames" id="sname" name="sname" onchange="isNotEmpty(this)" placeholder="Chemistry, Mathematics, etc."><br/></td>
+				<datalist id="commonSubjectNames">
+					<option value="English">
+					<option value="Mathematics">
+					<option value="Statistics">
+					<option value="Chemistry">
+					<option value="ICT/IT/CS">
+					<option value="Biology">
+					<option value="Arabic">
+					<option value="Physical Education">
+					<option value="Language">
+				</datalist>
+			</tr>
+
+			<tr>
+				<td><label for="smarks">Marks Obtained:</label></td>
+				<td><input type="number" id="smarks" name="smarks" onchange="isNotEmpty(this)" placeholder="0 you failure"><br/></td>
+			</tr>
+
+			<tr>
+				<td><label for="smax">Max Marks:</label></td>
+				<td><input type="number" id="smax" name="smax" onchange="isNotEmpty(this)" placeholder="40"><br/></td>
+			</tr>
+
+			<tr>
+				<td><label for="sweightage">Weightage Percentage:</label></td>
+				<td><input type="number" step="0.001" id="sweightage" name="sweightage" onchange="isWeightage(this)" placeholder="0.125"><br/></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>
+					<center>
+						<input type="submit" value="Add Subject">
+						<button type="button" onclick="calculateBtn()">Calculate Eid</button><br/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<div id="resultsViewer" style="visibility: collapse"></div>
+</center>

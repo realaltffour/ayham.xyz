@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:650d075de95e7538bad0ebc144a18181573b5561bfe7df01f1ad7d6e832b4259
-size 313
+---
+title: "The Beginning of a series!"
+date: 2021-10-01T16:05:06+03:00
+tags: ["first", "update"]
+---
+
+The Beginning of a series!
+
+
+This would be the beginning of my all-new article series. I would be writing about software I make and use, with the occasional school essay turned article.
+
+The story shall begin!
