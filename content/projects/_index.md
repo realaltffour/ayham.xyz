@@ -130,6 +130,7 @@ Description:
 A half-complete project written for personal use to gamify time management.
 
 ## cd proj/OSRAM
+![OSRAM.webp](pix/proj/osram.webp "osram.webp")
 Development Status: *Archived*  
 Project Link: [codeberg.org/ayham/OSRAM](https://codeberg.org/ayham/OSRAM)  
 Last Update: 2018-06-08  
