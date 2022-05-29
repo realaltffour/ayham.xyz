@@ -33,6 +33,7 @@ A top-tier list of interesting links I found on the Internet.
 * <https://anglishtimes.com> - How newspapers ought to be.
 * <https://without-systemd.org> - For a better world without SoystemD.
 * <http://intellindent.info> - Indentation Manifesto.
+* <https://spidr.today> - An AI-powered news aggregator.
 
 # Tools
 * <https://wiby.org> - The search engine for the minimal internet.
@@ -40,6 +41,7 @@ A top-tier list of interesting links I found on the Internet.
 * <https://0x0.st> - File sharing service, 512MB limit.
 * <https://termbin.com> - A terminal pastebin.
 * <https://temp.sh> - A file sharing service, but with 4GB limit.
+* <https://search.marginalia.nu> - DIY Search engine.
 
 # Link Directories
 * <https://soda.privatevoid.net/num/links> - An unorganized list of links.
