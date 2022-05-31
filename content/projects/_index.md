@@ -93,6 +93,17 @@ Description:
 Yet another grade 8 project. Calculates upper and lower bounds for
 pre-configured set of equations.
 
+## cd proj/QuicMaf
+![quicmaf.webp](pix/proj/quicmaf.webp "quicmaf")
+Development Status: *Archived*  
+Project Link: [codeberg.org/ayham/QuicMaf](https://codeberg.org/ayham/QuicMaf)  
+Last Update: 2019-03-24  
+Creation Date: 2019-02-14  
+Description:  
+A Maths project for Grade 8. Evaluates and solves basic linear algebric
+notations. This project ended up containing alot of bugs that I was too lazy to
+fix.
+
 ## cd proj/kilo
 ![kilo.webp](pix/proj/kilo.webp "kilo")
 Development Status: *Archived*  
