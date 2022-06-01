@@ -1,0 +1,4 @@
+editor 0* nvim
+git 0 eval $(ssh-agent); ssh-add ~/.ssh/id_ed25519;git log
+files 0
+hugo 0 hugo serve -D
