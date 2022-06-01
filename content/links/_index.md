@@ -22,6 +22,7 @@ A top-tier list of interesting links I found on the Internet.
 * <https://keunwoo.com> - Attempts to argue rebooting devices as principled,
   making this website worth the list.
 * <https://bhupesh.me> - A Go and Python developer.
+* <https://ramezanpour.net> - Python PostgreSQL developer.
 
 # Podcasts
 * <https://notrelated.xyz> - An interesting podcast.
