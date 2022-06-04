@@ -6,6 +6,7 @@ layout: "single"
 
 List of books I read, this is neither a recommendation list nor endorsement.
 
+* Bronze Age Pervert - Bronze Age Mindset
 * Anne Rooney - Think Like A Mathematician
 * Charles Darwin - A Tale Of Two Cities
 ![George Orwell - 1984](pix/library/1984.jpg "right")
