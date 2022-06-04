@@ -35,6 +35,7 @@ A top-tier list of interesting links I found on the Internet.
 * <https://without-systemd.org> - For a better world without SoystemD.
 * <http://intellindent.info> - Indentation Manifesto.
 * <https://spidr.today> - An AI-powered news aggregator.
+* <https://claremontreviewofbooks.com> - Amazing and fair review of books.
 
 # Tools
 * <https://wiby.org> - The search engine for the minimal internet.
