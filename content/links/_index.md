@@ -23,6 +23,9 @@ A top-tier list of interesting links I found on the Internet.
   making this website worth the list.
 * <https://bhupesh.me> - A Go and Python developer.
 * <https://ramezanpour.net> - Python PostgreSQL developer.
+* <https://nilfm.cc> - Derek Stevens, artist, programmer and philosopher.
+* <https://jenett.org> - Joe Jenett, an independent web maker and curator.
+* <https://jcs.org> - OpenBSD user and developer.
 
 # Podcasts
 * <https://notrelated.xyz> - An interesting podcast.
@@ -36,6 +39,7 @@ A top-tier list of interesting links I found on the Internet.
 * <http://intellindent.info> - Indentation Manifesto.
 * <https://spidr.today> - An AI-powered news aggregator.
 * <https://claremontreviewofbooks.com> - Amazing and fair review of books.
+* <https://yourlogicalfallacyis.com> - Stop making logical fallacies.
 
 # Tools
 * <https://wiby.org> - The search engine for the minimal internet.
@@ -44,6 +48,9 @@ A top-tier list of interesting links I found on the Internet.
 * <https://termbin.com> - A terminal pastebin.
 * <https://temp.sh> - A file sharing service, but with 4GB limit.
 * <https://search.marginalia.nu> - DIY Search engine.
+
+# Hardware
+* <https://thelightphone.com> - A minimal phone.
 
 # Link Directories
 * <https://soda.privatevoid.net/num/links> - An unorganized list of links.
