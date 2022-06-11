@@ -61,4 +61,6 @@ A top-tier list of interesting links I found on the Internet.
 
 # Other
 * <https://nytimes.com/games/wordle> - A good word game hosted by NYtimes.
+* <https://tie-a-tie.net> - Learn to tie a tie; sometimes tying a tie is not
+  en-tie-rely easy.
 * <https://hmpg.net/> - The end of the internet.
