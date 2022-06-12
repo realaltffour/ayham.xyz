@@ -40,6 +40,8 @@ A top-tier list of interesting links I found on the Internet.
 * <https://spidr.today> - An AI-powered news aggregator.
 * <https://claremontreviewofbooks.com> - Amazing and fair review of books.
 * <https://yourlogicalfallacyis.com> - Stop making logical fallacies.
+* <https://www.mentalmodelsbox.com> - A list of mental models
+* <https://effectiviology.com> - Practical philosophy.
 
 # Tools
 * <https://wiby.org> - The search engine for the minimal internet.
@@ -54,6 +56,8 @@ A top-tier list of interesting links I found on the Internet.
 
 # Link Directories
 * <https://soda.privatevoid.net/num/links> - An unorganized list of links.
+* <https://dotshare.it/> - dotfile sharing platform, social media style
+  (somewhat)
 
 # Social
 * <https://lobste.rs>
