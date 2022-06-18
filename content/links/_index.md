@@ -26,6 +26,7 @@ A top-tier list of interesting links I found on the Internet.
 * <https://nilfm.cc> - Derek Stevens, artist, programmer and philosopher.
 * <https://jenett.org> - Joe Jenett, an independent web maker and curator.
 * <https://jcs.org> - OpenBSD user and developer.
+* <https://scottlocklin.wordpress.com> - A former physicist.
 
 # Podcasts
 * <https://notrelated.xyz> - An interesting podcast.
