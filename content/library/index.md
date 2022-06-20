@@ -42,7 +42,3 @@ List of books I read, this is neither a recommendation list nor endorsement.
 * Slavoj Zizek - The Sublime Object of Ideology
 * Mario Puzo - The Godfather
 * Debra Soh - The End of Gender: Debunking the Myths About Sex and Identity in Our Society
-
-## Any recommendations?
-If you have any books you would like to [recommend](recommend),
-contact me [here](https://contact.ayham.xyz). (P.S. "red-pilled" books are especially welcomed).
