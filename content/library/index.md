@@ -20,6 +20,7 @@ List of books I read, this is neither a recommendation list nor endorsement.
 * John R. Searle - The Mystery of Consciousness
 * Mark Bauerlein - The Dumbest Generation
 * Paul Krugman - The Accidental Theorist and Other Dispatches From the Dismal Science
+* Adam Smith - Volume 1 - The Wealth Of Nations
 * George Orwell - 1984
 * Titania McGrath - My First Little Book of Intersectional Activism
 * Titania McGrath - Woke: A Guide to Social Justice

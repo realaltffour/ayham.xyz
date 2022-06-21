@@ -66,7 +66,7 @@ A top-tier list of interesting links I found on the Internet.
 * <https://news.ycombinator.com/> - The Official Hacker News forum.
 
 # Art
-* <https://art.marcsimonetti.co> - French concept artist/ illustrator.
+* <https://art.marcsimonetti.com> - French concept artist/illustrator.
 
 # Other
 * <https://nytimes.com/games/wordle> - A good word game hosted by NYtimes.
