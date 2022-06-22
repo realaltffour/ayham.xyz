@@ -67,6 +67,7 @@ A top-tier list of interesting links I found on the Internet.
 
 # Art
 * <https://art.marcsimonetti.com> - French concept artist/illustrator.
+* <https://artvee.com> - Classical Art
 
 # Other
 * <https://nytimes.com/games/wordle> - A good word game hosted by NYtimes.
