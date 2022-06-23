@@ -27,6 +27,7 @@ A top-tier list of interesting links I found on the Internet.
 * <https://jenett.org> - Joe Jenett, an independent web maker and curator.
 * <https://jcs.org> - OpenBSD user and developer.
 * <https://scottlocklin.wordpress.com> - A former physicist.
+* <https://mnot.net> - Chair of IETF HTTP WG.
 
 # Podcasts
 * <https://notrelated.xyz> - An interesting podcast.
