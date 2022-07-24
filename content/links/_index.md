@@ -53,6 +53,7 @@ A top-tier list of interesting links I found on the Internet.
 * <https://termbin.com> - A terminal pastebin.
 * <https://temp.sh> - A file sharing service, but with 4GB limit.
 * <https://search.marginalia.nu> - DIY Search engine.
+* <https://goatcounter.com> - Privacy respecting WebAnalytics.
 
 # Hardware
 * <https://thelightphone.com> - A minimal phone.
